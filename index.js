@@ -10,7 +10,7 @@ const messageRoutes = require("./routes/messages");
 const mongoose = require("mongoose");
 require("dotenv").config({ path: "./configs/.env" });
 
-const PORT = process.env.PORT || "8080";
+const PORT = process.env.PORT || 5000;
 
 mongoose
   .connect(process.env.MONGO_DB_URI, {
