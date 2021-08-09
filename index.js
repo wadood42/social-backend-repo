@@ -1,5 +1,4 @@
 const express = require("express");
-const morgan = require("morgan");
 const helmet = require("helmet");
 const app = express();
 const userRoutes = require("./routes/users");
@@ -27,8 +26,6 @@ mongoose
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(helmet());
-app.use(morgan("dev"));
 
 // ROUTES FOR USER
 app.use("/api/conversations", conversationRoutes);
